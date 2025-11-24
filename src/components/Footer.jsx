@@ -74,7 +74,7 @@ export default function AgeroFooter() {
               ">
                 <p className="flex-1">© 2025 Appnity. All rights reserved.</p>
                 <p className="flex-1">India — {today}</p> 
-                <a href="#head" className="flex-1 text-orange-400 hover:text-orange-300  lg:[pl-32]">
+                <a href="#head" className="flex-1 z-30 text-orange-400 hover:text-orange-300  lg:[pl-32]">
                   Back to top
                 </a>
               </div>
