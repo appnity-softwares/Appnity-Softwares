@@ -7,11 +7,11 @@ const plans = [
   {
     id: 1,
     name: "Standard Plan",
-    price: "₹500",
+    price: "₹9,999",
     period: "/ month",
     description:
       "Ideal for lean teams or startups needing clean, fast design delivery for websites or branding assets.",
-    delivery: "4-6 weeks",
+    delivery: "2–4 weeks",
     features: [
       "You provide the wireframe",
       "Visual design using Figma & Framer",
@@ -27,7 +27,7 @@ const plans = [
   {
     id: 2,
     name: "Premium Plan",
-    price: "Starting at ₹1000",
+    price: "Starting at ₹19,999",
     period: "",
     description:
       "A complete design experience — tailored strategy, polished visuals, and flexible collaboration throughout the process.",
