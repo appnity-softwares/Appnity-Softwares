@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { Check, ArrowRight, Square } from "lucide-react";
+import image from "../assets/ap2.png";
+import image1 from "../assets/appnitylogo.png";
 
 const plans = [
   {
     id: 1,
     name: "Standard Plan",
-    price: "500$",
-    period: "/month",
+    price: "₹500",
+    period: "/ month",
     description:
       "Ideal for lean teams or startups needing clean, fast design delivery for websites or branding assets.",
     delivery: "4–6 weeks",
@@ -18,14 +20,14 @@ const plans = [
     ],
     gradient: "from-white to-gray-50",
     textColor: "text-neutral-800",
-    iconBg: "bg-neutral-200",
+    icon: image,   // ← correct way
     buttonColor: "bg-neutral-800",
     buttonText: "text-white",
   },
   {
     id: 2,
     name: "Premium Plan",
-    price: "Starting at $1000",
+    price: "Starting at ₹1000",
     period: "",
     description:
       "A complete design experience — tailored strategy, polished visuals, and flexible collaboration throughout the process.",
@@ -38,13 +40,15 @@ const plans = [
     ],
     gradient: "from-neutral-900 to-orange-700",
     textColor: "text-white",
-    iconBg: "bg-neutral-800",
+    icon: image1,  // ← same icon (you can change later)
     buttonColor: "bg-neutral-800",
     buttonText: "text-white",
   },
 ];
 
-const PricingSection= () => {
+
+
+const PricingSection = () => {
   const refs = useRef([]);
   const cardContainerRef = useRef(null);
 
@@ -55,17 +59,17 @@ const PricingSection= () => {
           const card = entry.target;
           if (entry.isIntersecting) {
             card.classList.add("scale-100", "opacity-100");
-            card.classList.remove("scale-95", "opacity-80");
+            card.classList.remove("scale-100", "opacity-80");
           } else {
             const rect = card.getBoundingClientRect();
             if (rect.top < window.innerHeight / 2) {
               // Card has scrolled past the middle of the viewport
               card.classList.remove("scale-100", "opacity-100");
-              card.classList.add("scale-95", "opacity-80");
+              card.classList.add("scale-100", "opacity-80");
             } else {
               // Card is below the viewport, or just entering
               card.classList.remove("scale-100", "opacity-100");
-              card.classList.add("scale-95", "opacity-80");
+              card.classList.add("scale-100", "opacity-80");
             }
           }
         });
@@ -91,7 +95,7 @@ const PricingSection= () => {
   return (
     <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20  pb-40 font-['sans-serif'] ">
       {/* Header */}
-<header className="-mb-28 sm:mb-10 md:mb-20 text-center px-4">
+      <header className="-mb-28 sm:mb-5 md:mb-3 text-center px-4">
         <p className="text-neutral-700 mb-2 font-serif">(Pricing Plan)</p>
         <h1 className="text-4xl md:text-7xl font-sans  text-neutral-950 leading-tight">
           <b>Explore Pricing</b>
@@ -99,7 +103,8 @@ const PricingSection= () => {
       </header>
 
       {/* Cards Container */}
-      <main ref={cardContainerRef} className="w-[90vw]  max-w-3xl mx-auto">
+      <main ref={cardContainerRef} className="w-full max-w-4xl mx-auto">
+
         {plans.map((plan, index) => (
           <div
             key={plan.id}
@@ -110,33 +115,28 @@ const PricingSection= () => {
               ${index === 0 ? 'z-20' : 'z-30'} /* Premium card (index 1) needs higher z-index when it scrolls up */
             `}
             style={{
-                // Position the cards for the stacking effect
-                position: 'sticky',
-                // White card (index 0) sticks higher, orange card (index 1) sticks lower
-                top: `${index * 50 + 20}px`,
-                // Negative margin to bring the second card up and make it overlap
-                marginTop: index === 1 ? '-100px' : '0', // Adjust this value for desired overlap
+              // Position the cards for the stacking effect
+              position: 'sticky',
+              // White card (index 0) sticks higher, orange card (index 1) sticks lower
+              top: `${index * 50 + 20}px`,
+              // Negative margin to bring the second card up and make it overlap
+              marginTop: index === 1 ? '-100px' : '0', // Adjust this value for desired overlap
             }}
           >
             <div
               className={`bg-gradient-to-br ${plan.gradient} ${plan.textColor}
-                grid grid-cols-1 lg:grid-cols-2 items-stretch p-8 md:p-10 rounded-3xl
-                overflow-hidden h-full mt-28
-              `}
+    grid grid-cols-1 lg:grid-cols-2 items-baseline p-8 md:p-10 rounded-3xl
+    overflow-hidden min-h-[600px] md:min-h-[450px] lg:min-h-[450px] mt-28
+  `}
             >
+
               {/* Left Section */}
               <div className="flex flex-col justify-between gap-6 text-left pr-0 lg:pr-8 pb-8 lg:pb-0">
                 {/* Icon */}
-                <div
-                  className={`w-12 h-12 ${plan.iconBg} flex items-center justify-center rounded-xl shadow-md`}
-                >
-                  <Square
-                    size={24}
-                    className={plan.textColor === 'text-white' ? 'text-white' : 'text-neutral-800'}
-                    fill="currentColor"
-                    strokeWidth={0}
-                  />
+                <div className="w-20 h-20 flex items-center justify-center  ">
+                  <img src={plan.icon} alt="icon" className="w-15 h-15 object-contain" />
                 </div>
+
 
                 <div>
                   <h2 className="text-3xl font-semibold mb-3 leading-tight">
@@ -154,7 +154,7 @@ const PricingSection= () => {
               </div>
 
               {/* Right Section */}
-              <div className="flex flex-col justify-between h-full pl-0 lg:pl-8 pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-current/20">
+              <div className="flex flex-col justify-between h-full pl-0 lg:pl-8 pt-8 lg:pt-11 border-t lg:border-t-0 lg:border-l border-current/20">
                 <div>
                   <h3 className="text-4xl font-bold mb-5 leading-tight">
                     {plan.price}
@@ -183,7 +183,7 @@ const PricingSection= () => {
                 </div>
 
                 <button
-                  className={`mt-10  flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium text-base
+                  className={`   flex items-center justify-center gap-2 rounded-full px-7 py-3 font-medium text-base
                     ${plan.buttonColor} ${plan.buttonText} hover:opacity-90 transition
                   `}
                 >
