@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: sans-serif; /* Or your preferred font */
+}
+.font-cursive {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Sirf is component ke liye Inter font import karein */
+
+/* Custom CSS for the image half-blur effect, renamed for scoping */
+.image-with-half-blur-scoped {
+  position: relative;
+  display: block;
+  height: auto;
+}
+
+.image-with-half-blur-scoped::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+}
