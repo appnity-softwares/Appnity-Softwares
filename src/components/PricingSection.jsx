@@ -11,7 +11,7 @@ const plans = [
     period: "/ month",
     description:
       "Ideal for lean teams or startups needing clean, fast design delivery for websites or branding assets.",
-    delivery: "4–6 weeks",
+    delivery: "4-6 weeks",
     features: [
       "You provide the wireframe",
       "Visual design using Figma & Framer",
