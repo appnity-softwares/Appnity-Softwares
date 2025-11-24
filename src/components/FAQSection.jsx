@@ -62,12 +62,12 @@ const FAQSection = () => {
     <div className="min-h-screen bg-[#dbdbdb] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-20">
-          <p className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-2">(FAQs)</p>
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Your Questions, Answered
           </h1>
           <p className="mt-4 text-gray-600 text-lg md:text-xl">
-            Helping you understand our process and offerings at Agero.
+            Helping you understand our process and offerings at Appnity .
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">

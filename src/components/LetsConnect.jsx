@@ -15,9 +15,9 @@ export default function LetsConnect() {
 
   // CLEAN EMAIL LIST (no X symbols here)
   const emails = [
-    "franklin@agero.com",
-    "franklin@agero.com",
-    "franklin@agero.com",
+    "business@appnity.co.in",
+    "business@appnity.co.in",
+    "business@appnity.co.in",
   ];
 
   return (
