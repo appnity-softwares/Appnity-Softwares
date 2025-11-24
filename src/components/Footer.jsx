@@ -1,6 +1,7 @@
 import React from "react";
 import third from "../assets/third3.png";
 export default function AgeroFooter() {
+  let today = new Date().getDate() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getFullYear();
   return (
     <div className="min-h-screen p-4 bg-[#dbdbdb]">
       <footer className="relative min-h-screen overflow-hidden rounded-3xl">
@@ -71,9 +72,9 @@ export default function AgeroFooter() {
                 text-gray-400 text-sm gap-4
                 mb-40 sm:mb-60 text-center sm:text-left lg:items-baseline
               ">
-                <p className="flex-1">© 2025 Agero. All rights reserved.</p>
-                <p className="flex-1">London — 00:55:47</p>
-                <a href="#top" className="flex-1 text-orange-400 hover:text-orange-300  lg:[pl-32]">
+                <p className="flex-1">© 2025 Appnity. All rights reserved.</p>
+                <p className="flex-1">India — {today}</p> 
+                <a href="#head" className="flex-1 z-30 text-orange-400 hover:text-orange-300  lg:[pl-32]">
                   Back to top
                 </a>
               </div>

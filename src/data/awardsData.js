@@ -1,9 +1,9 @@
 export const awards = [
 
   {
-    name: "Awwwards",
-    title: "SOTY 2023 - 1st Winner",
-    company: "Archin",
+    name: "First",
+    title: "CROVA",
+    company: "Link →",
     images: [
    "https://framerusercontent.com/images/37rQg0jsNt3doVASSt8Gtsts.svg",
 
@@ -11,18 +11,18 @@ export const awards = [
     ],
   },
   {
-    name: "CSS Awards",
-    title: "Top 5 Best of eCommerce Websites 2023",
-    company: "VNTNR",
+    name: "Second",
+    title: "Growth Hub",
+    company: "Link →",
     images: [
       "https://framerusercontent.com/images/71Dh7U3QdOb9yYiFfJnt78pe30A.svg",
       ,
     ],
   },
   {
-    name: "CSS Awards",
-    title: "Winner - US Behance Portfolio Review 2024",
-    company: "Aeorim",
+    name: "Third",
+    title: "Let It Be AI",
+    company: "Link →",
 
     images: [
        "https://framerusercontent.com/images/9Th1qGLYST6YJYL0sXOf5Clc9r0.svg",
@@ -30,18 +30,18 @@ export const awards = [
     ],
   },
   {
-    name: "Dribble",
-    title: "Top 10 Best of Mobile App Design 2024",
-    company: "Swat Co.",
+    name: "Fourth",
+    title: "Ramedix Pharma",
+    company: "Link →",
     images: [
       "https://framerusercontent.com/images/rw5cnTgSCNnxr9gI5TfShYvFJ9M.svg",
 
     ],
   },
   {
-    name: "FWA Awards",
-    title: "Winner - Best of Architecture Website 2025",
-    company: "Unerio",
+    name: "Fifth",
+    title: "AI Mock Interviews",
+    company: "Link →",
     images: [
       "https://framerusercontent.com/images/37rQg0jsNt3doVASSt8Gtsts.svg",
 
