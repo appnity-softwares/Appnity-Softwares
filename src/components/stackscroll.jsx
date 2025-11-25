@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
 import img2 from "../assets/stack2.png";
 import img3 from "../assets/stack3.png";
@@ -17,18 +16,6 @@ const StickyCardsSection = () => {
   // ✨ Smooth Scroll + GSAP Animation
   // ----------------------------------------------
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smooth: true,
-      direction: "vertical-right",
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     const ctx = gsap.context(() => {
       cardRefs.current.forEach((card, index) => {
         if (!card) return;
@@ -69,7 +56,7 @@ const StickyCardsSection = () => {
       {/* Mini Subtitle */}
       {/* ------------------------------------------ */}
       <p className="text-center text-gray-600 text-xs sm:text-sm md:text-base tracking-wide mb-2 relative z-10">
-        (Why clients love appnity)
+
       </p>
 
       {/* Big Title */}
@@ -83,7 +70,7 @@ const StickyCardsSection = () => {
             whitespace-nowrap select-none
           "
         >
-       Momentum
+          Momentum
         </h1>
       </div>
 
@@ -105,7 +92,7 @@ const StickyCardsSection = () => {
                   sm:h-[130vh]       /* small tablet bigger */
                  md:h-full          /* desktop normal */
                       "
-                  >
+            >
               <img
                 src={img}
                 alt=""

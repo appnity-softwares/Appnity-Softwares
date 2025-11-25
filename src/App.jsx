@@ -11,8 +11,13 @@ import BlogPage from "./pages/BlogPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import PortfolioPage from "./pages/PortfolioPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import useSmoothScroll from "./hooks/useSmoothScroll";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const App = () => {
+  useSmoothScroll();
   return (
     <Router>
       <NavBar />
