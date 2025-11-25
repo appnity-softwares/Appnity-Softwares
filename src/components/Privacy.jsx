@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrivacyPolicy = () => {
+const Privacy = () => {
   return (
     <div className="min-h-screen bg-[#dbdbdb] text-black px-6 py-20 md:px-24 lg:px-40 leading-relaxed">
 
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
         outside parties. Our focus is on providing value through transparent and most
         respectful communication.
       </p>
-            {/* ---- Heading ---- */}
+      {/* ---- Heading ---- */}
       <h1 className="text-4xl md:text-5xl font-bold mb-8">
         Information We Collect
       </h1>
@@ -84,4 +84,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Privacy;

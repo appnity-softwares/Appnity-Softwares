@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import PrivacyPolicy from "./pages/privacy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Works from "./pages/Works.jsx";
 import Services from "./pages/Services.jsx";
