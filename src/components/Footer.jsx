@@ -51,7 +51,8 @@ export default function AgeroFooter() {
                 <h3 className="text-gray-400 text-xs uppercase mb-3 tracking-wider">Legals</h3>
                 <ul className="space-y-2 text-2xl sm:text-2xl font-bold py-3">
                   <li><Link to="/privacy-policy" className="text-white hover:text-orange-400">Privacy Policy</Link></li>
-                  <li><a href="#terms" className="text-white hover:text-orange-400">Terms of Service</a></li>
+                  
+                  <li><Link to="/terms-of-service" className="text-white hover:text-orange-400">Terms of Service</Link></li>
                 </ul>
               </div>
 
