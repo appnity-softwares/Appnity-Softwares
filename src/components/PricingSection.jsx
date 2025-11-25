@@ -96,7 +96,7 @@ const PricingSection = () => {
     <div className="bg-[#dbdbdb] min-h-screen flex flex-col items-center pt-20  pb-40 font-['sans-serif'] ">
       {/* Header */}
       <header className="-mb-28 sm:mb-5 md:mb-3 text-center px-4">
-        <p className="text-neutral-700 mb-2 font-serif">(Pricing Plan)</p>
+        <p className="text-neutral-700 mb-2 font-serif"></p>
         <h1 className="text-4xl md:text-7xl font-sans  text-neutral-950 leading-tight">
           <b>Explore Pricing</b>
         </h1>

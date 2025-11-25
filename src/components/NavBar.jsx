@@ -7,7 +7,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-[#f3f3f3]  relative pt-8 pb-4" id="head"> 
+    <header className="bg-[#f3f3f3]  relative pt-8 pb-4" id="head">
       {/* Top Badge */}
       <div className="absolute inset-x-0 -top-1 flex justify-center">
         <div className="bg-[#333] text-white px-5 py-2 rounded-b-2xl flex items-center gap-2 shadow-md whitespace-nowrap">

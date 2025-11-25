@@ -14,12 +14,14 @@ const FounderCard = () => { // Component ka naam file ke naam se match karne ke 
 
   return (
     <div className="relative -mt-24 bg-[#dbdbdb] py-16 font-inter overflow-hidden">
-      <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-10 md:mb-20 relative z-10">
-        (intro)
+      <p className="text-center text-gray-500 text-sm md:text-base tracking-wide mb-24 md:mb-20 relative z-10">
+        <div></div>
+        <br />
       </p>
       <h1
         className="absolute top-[8%] left-1/2 -translate-x-1/2 
         text-[18vw] sm:text-[22vw] md:text-[13vw] 
+        
         font-semibold leading-none 
         bg-gradient-to-b from-[rgba(22,22,22,0.83)] via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0)]
         bg-clip-text text-transparent opacity-40 z-10 whitespace-nowrap select-none"
@@ -34,7 +36,7 @@ const FounderCard = () => { // Component ka naam file ke naam se match karne ke 
           }
         `}
       </style>
-      <div className="relative z-10 container mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 md:gap-32 px-4 sm:px-6 md:px-10">
+      <div className="relative z-10 container mx-auto flex flex-col lg:flex-row justify-center items-center lg:items-start gap-20 md:gap-32 px-4   sm:px-6 md:px-10">
         <div className="relative w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] z-20 mt-10 md:mt-14 lg:mt-7" data-aos="fade-right">
           <div className="relative rounded-2xl overflow-hidden image-with-half-blur-scoped">
             <img

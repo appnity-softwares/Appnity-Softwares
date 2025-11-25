@@ -33,20 +33,20 @@ const OurValues = () => {
   }, []);
 
   return (
-    <section className="bg-white py-20 md:py-28 font-inter">
+    <section className="bg-[#f3f3f3]  py-20 md:py-28 font-inter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-2">(Our Core Values)</p>
+          <p className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-2"></p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             The Principles We Stand For
           </h1>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {values.map((value, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
-              data-aos="fade-up" 
+              data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className="mb-6">
