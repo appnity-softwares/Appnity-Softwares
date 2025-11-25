@@ -8,8 +8,8 @@ const PortfolioPage = () => {
     return (
         <div className="bg-[#e6e6e6] min-h-screen">
             <PortfolioHead />
-            <PortfolioTemplate />
             <PortfolioCarousel />
+            <PortfolioTemplate />
             <LetsConnect />
         </div>
     );
