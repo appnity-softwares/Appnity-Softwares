@@ -13,4 +13,4 @@ const TermsOfServicePage = () => {
     );
 };
 
-export default TermsOfService;
+export default TermsOfServicePage;
