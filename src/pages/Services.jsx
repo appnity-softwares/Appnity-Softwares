@@ -1,9 +1,9 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import PricingSection from '../components/PricingSection'
-import FAQSection from '../components/FAQSection'
-import LetsConnect from '../components/LetsConnect'
-import ServiceCard from '../components/ServiceCard'
+import Hero from '../components/Hero.jsx'
+import PricingSection from '../components/PricingSection.jsx'
+import FAQSection from '../components/FAQSection.jsx'
+import LetsConnect from '../components/LetsConnect.jsx'
+import ServiceCard from '../components/ServiceCard.jsx'
 
 
 
@@ -12,13 +12,13 @@ import ServiceCard from '../components/ServiceCard'
 const Services = () => {
   return (
     <div>
-        <Hero/>
-        <ServiceCard/>
-        <PricingSection/>
-        <FAQSection/>
-        <LetsConnect/>
+      <Hero />
+      <ServiceCard />
+      <PricingSection />
+      <FAQSection />
+      <LetsConnect />
 
-      
+
     </div>
   )
 }
