@@ -32,7 +32,7 @@ const AwardItem = memo(({ award, isHovered, onMouseEnter, onMouseLeave }) => {
 
       {/* Right */}
       <span className={`text-left sm:text-right text-[14px] sm:text-[15px] font-light transition-colors ${isHovered ? "text-orange-500" : "text-gray-600"}`}>
-        {award.company}
+        <a href={award.link}>{award.company}</a>
       </span>
     </div>
   );
