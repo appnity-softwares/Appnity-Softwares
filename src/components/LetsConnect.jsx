@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
+import InputField from "./InputField";
 
 export default function LetsConnect() {
   const [formData, setFormData] = useState({
@@ -7,10 +9,46 @@ export default function LetsConnect() {
     email: "",
     description: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+  const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE") {
+      toast.error("Please configure the Google Sheets backend URL first.");
+      return;
+    }
+
+    setLoading(true);
+    const toastId = toast.loading("Sending message...");
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        toast.success("Message sent successfully!", { id: toastId });
+        setFormData({ name: "", email: "", description: "" });
+      } else {
+        throw new Error(result.message || "Failed to send");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Something went wrong. Please try again.", { id: toastId });
+    } finally {
+      setLoading(false);
+    }
   };
 
   // CLEAN EMAIL LIST (no X symbols here)
@@ -25,6 +63,7 @@ export default function LetsConnect() {
       className="relative min-h-screen overflow-hidden"
       style={{ backgroundColor: "#dbdbdb" }}
     >
+      <Toaster position="top-center" />
       {/* BIG HEADING */}
       <div className="relative h-60 sm:h-72 md:h-96 lg:h-[28rem] flex items-center justify-center overflow-hidden">
         <h1 className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[12rem] font-bold text-center leading-none tracking-tight bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40">
@@ -58,59 +97,44 @@ export default function LetsConnect() {
               {/* RIGHT FORM */}
               <div className="flex justify-center">
                 <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-md">
-                  <div>
-                    <label className="block text-white text-sm mb-2">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter your Name"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="w-full bg-transparent border-b border-white/30 pb-4 text-white placeholder-gray-400 focus:outline-none focus:border-white/60 font-semibold text-sm"
-                    />
-                  </div>
+                  <InputField
+                    name="name"
+                    label="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Enter your Name"
+                    variant="minimal"
+                    required
+                  />
 
-                  <div>
-                    <label className="block text-white text-sm mb-2">
-                      Your Email
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="Enter the Email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full bg-transparent border-b border-white/30 pb-4 text-white placeholder-gray-400 focus:outline-none focus:border-white/60 font-semibold text-sm"
-                    />
-                  </div>
+                  <InputField
+                    name="email"
+                    type="email"
+                    label="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter the Email"
+                    variant="minimal"
+                    required
+                  />
 
-                  <div>
-                    <label className="block text-white text-sm mb-2">
-                      Project Description
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Type Here..."
-                      value={formData.description}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          description: e.target.value,
-                        })
-                      }
-                      className="w-full bg-transparent border-b border-white/30 pb-4 text-white placeholder-gray-400 focus:outline-none focus:border-white/60 font-semibold text-sm"
-                    />
-                  </div>
+                  <InputField
+                    name="description"
+                    type="textarea"
+                    label="Project Description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    placeholder="Type Here..."
+                    variant="minimal"
+                    required
+                  />
 
                   <button
                     type="submit"
-                    className="w-full bg-white text-black text-sm py-3 rounded-full hover:bg-gray-200 font-bold transition-all mt-6"
+                    disabled={loading}
+                    className="w-full bg-white text-black text-sm py-3 rounded-full hover:bg-gray-200 font-bold transition-all mt-6 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Send Now!
+                    {loading ? "Sending..." : "Send Now!"}
                   </button>
                 </form>
               </div>
@@ -155,4 +179,3 @@ export default function LetsConnect() {
     </div>
   );
 }
- 
