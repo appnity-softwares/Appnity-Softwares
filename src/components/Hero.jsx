@@ -65,7 +65,7 @@ const Hero = () => {
 
       {/* Button */}
       <button className="bg-[#333] text-white px-6 sm:px-8 py-3 rounded-full shadow-md hover:bg-black transition-all hover:scale-105 duration-200 flex items-center justify-center mx-auto gap-2">
-        {heroData.buttonText} <span className="text-lg">→</span>
+        <a href="#price010">{heroData.buttonText} </a><span className="text-lg">→</span>
       </button>
     </section>
   );
