@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import img2 from "../assets/stack2.png";
-import img3 from "../assets/stack3.png";
+import img2 from "../assets/brainwavescale.png";
+import img3 from "../assets/growthhubscale.png";
 import img5 from "../assets/stack5.png";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,23 +50,20 @@ const StickyCardsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#dbdbdb] overflow-hidden py-16 md:py-24"
+      className="relative bg-[#dbdbdb] overflow-hidden py-14 md:py-24"
     >
-      {/* ------------------------------------------ */}
-      {/* Mini Subtitle */}
-      {/* ------------------------------------------ */}
-      <p className="text-center text-gray-600 text-xs sm:text-sm md:text-base tracking-wide mb-2 relative z-10">
-
-      </p>
+ 
 
       {/* Big Title */}
-      <div className="flex justify-center items-center min-h-[22vh] relative">
+      <div className="flex justify-center items-center h-[18vh] sm:h-[20vh] md:h-[22vh] relative">
         <h1
           className="
-            absolute top-[9%] left-1/2 -translate-x-1/2 
-            text-[14vw] md:text-[13vw] font-semibold leading-none 
-            bg-gradient-to-b from-[rgba(22,22,22,0.83)] via-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0)]
-            bg-clip-text text-transparent opacity-40 z-10 
+            absolute left-1/2 -translate-x-1/2
+            text-[18vw] sm:text-[18vw] md:text-[13vw] lg:text-[10vw]
+            top-[40%] sm:top-[11%] md:top-[7%]
+            font-semibold leading-none
+            bg-gradient-to-b from-black/80 via-black/30 to-transparent
+            bg-clip-text text-transparent opacity-40
             whitespace-nowrap select-none
           "
         >
@@ -87,7 +84,7 @@ const StickyCardsSection = () => {
             {/* BACKGROUND BLUR */}
             <div
               className="
-                  absolute inset-0 rounded-3xl overflow-hidden bg-black/60
+                  absolute inset-0 rounded-3xl overflow-hidden bg-black/60 object-cover
                   h-[120vh]          /* mobile big */
                   sm:h-[130vh]       /* small tablet bigger */
                  md:h-full          /* desktop normal */
@@ -142,10 +139,22 @@ const StickyCardsSection = () => {
                 md:hidden
               "
             >
-              <p className="text-[11px] leading-relaxed opacity-80 max-w-[85%] sm:max-w-[70%]">
-                We’ve helped businesses across industries achieve their goals.
-                Here are some of our selected works.
-              </p>
+<p
+  className="
+    text-[10px] sm:text-[12px] md:text-sm
+    leading-relaxed sm:leading-normal
+    opacity-80
+
+    max-w-[85%] sm:max-w-[70%] md:max-w-[60%]
+
+    sm:text-start        /* Tablet → text-align: start */
+    md:pr-[73px]         /* Tablet → padding-right: 73px */
+  "
+>
+  We’ve helped businesses across industries achieve their goals.
+  Here are some of our selected works.
+</p>
+
 
               <p className="text-[11px] tracking-wider opacity-70">
                 {String(i + 1).padStart(2, "0")} / 03
@@ -221,15 +230,15 @@ const StickyCardsSection = () => {
                   {String(i + 1).padStart(2, "0")} / 03
                 </p>
 
-                <h3 className="text-6xl font-semibold text-white">
-                  {i % 2 === 0 ? "Archin" : "VNTNR"}
+                <h3 className="text-2xl font-semibold text-white">
+                  {i % 2 === 0 ? "GROWTH HUB" : "BRAINWAVE"}
                 </h3>
               </div>
             </div>
 
             <div
               className="
-                absolute right-[20%] top-1/2 -translate-y-1/2 
+                absolute right-[15%] top-1/2 -translate-y-1/2 
                 z-20 hidden md:flex flex-col justify-between h-[60vh]
                 text-gray-200
               "

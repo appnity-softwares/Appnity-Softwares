@@ -11,39 +11,43 @@
 // ];
 
 
-
 export const faqs = [
-  // Left Column (Pehla column)
+  // Left Column
   { 
     id: 1, 
     q: "Why choose Appnity over a full-time developer?", 
-    a: "Appnity aapko flexibility aur cost-effectiveness offer karta hai, jisme aapko full-time employee ke overhead ke bina top-quality development services milti hain." 
+    a: "Appnity offers you flexibility and cost-effectiveness, providing top-quality development services without the overhead of hiring a full-time employee." 
   },
+
   { 
     id: 2, 
     q: "How quickly can I expect my software updates or features?", 
-    a: "Hum fast aur efficient hain! Most updates aur features 3-5 business days mein deliver ho jate hain. Hum quality aur timely delivery dono ko prioritize karte hain." 
+    a: "We work fast and efficiently! Most updates and new features are delivered within 3–5 business days. We prioritize both quality and timely delivery." 
   },
+
   { 
     id: 3, 
     q: "How does the Appnity development process work?", 
-    a: "Aap apni requirements submit karte hain, hum development karte hain, aap review karte hain, aur hum revisions karte hain jab tak aap satisfied na ho jayein. Simple aur transparent process." 
+    a: "You submit your requirements, we build the feature, you review it, and we revise it until you’re fully satisfied. A simple, transparent, and smooth workflow." 
   },
   
-  // Right Column (Dusra column)
+  // Right Column
   { 
     id: 4, 
     q: "How do I request a new feature or update?", 
-    a: "Aap apni dedicated client portal ya email/form ke through easily ek new feature ya update request kar sakte hain. Hum aapki needs ko samajh kar jaldi kaam karte hain." 
+    a: "You can easily request new features or updates through your dedicated client portal, email, or submission form. We understand your needs and get started quickly." 
   },
+
   { 
     id: 5, 
     q: "What if I am not satisfied with the outcome?", 
-    a: "Koi tension nahi! Hum unlimited revisions offer karte hain jab tak design ya feature aapki expectations ke according na ho jaye. Aapki satisfaction hamari priority hai." 
+    a: "No worries! We offer unlimited revisions until the design or feature meets your expectations. Your satisfaction is our top priority." 
   },
+
   { 
     id: 6, 
     q: "Do you offer refunds?", 
-    a: "Refund policy ki details humare terms of service mein milti hain. General rules ke tahat, refunds work completed aur specific conditions ke basis par decide hote hain." 
+    a: "Refund details are available in our Terms of Service. Generally, refunds depend on the amount of work completed and specific conditions outlined in the policy." 
   },
 ];
+
