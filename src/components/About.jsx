@@ -33,25 +33,33 @@ const About = () => {
 
 
       {/* Buttons Container */}
-      <div
-        className="mt-10 md:mt-14 w-full max-w-2xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        {/* First row */}
-        <div className="flex flex-wrap justify-center gap-3">
-          <Button name="Branding01" icon="fa-solid fa-globe" />
-          <Button name="Logo" icon="fas fa-globe" />
-          <Button name="Website" icon="fas fa-desktop" />
-        </div>
+{/* Buttons Container */}
+<div
+  className="mt-10 md:mt-14 w-full max-w-lg mx-auto"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  <div
+    className="
+      grid
+      grid-cols-2          /* MOBILE → 2 buttons per row */
+      sm:grid-cols-3       /* TABLET → 3 per row */
+      lg:grid-cols-3       /* DESKTOP → 3 per row (compact like screenshot) */
+      gap-4                /* spacing for mobile */
+      md:gap-2             /* more spacing tablet+ */
+      place-items-center   /* center align buttons */
+    "
+  >
+    <Button name="Branding" icon="fas fa-star" />
+    <Button name="Logo" icon="fas fa-globe" />
+    <Button name="Website" icon="fas fa-desktop" />
 
-        {/* Second row */}
-        <div className="flex flex-wrap justify-center gap-3 mt-4">
-          <Button name="Illustration" icon="fas fa-paint-brush" />
-          <Button name="Interface" icon="fas fa-bullseye" />
-          <Button name="Strategy" icon="fas fa-lightbulb" />
-        </div>
-      </div>
+    <Button name="Illustration" icon="fas fa-paint-brush" />
+    <Button name="Interface" icon="fas fa-table-cells" />
+    <Button name="Strategy" icon="fas fa-lightbulb" />
+  </div>
+</div>
+
     </section>
   );
 };

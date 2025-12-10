@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import test1 from "../assets/test1.png";
-import test2 from "../assets/test2.png";
-import test3 from "../assets/test3.png";
+import test1 from "../assets/crova.png";
+import test2 from "../assets/growthhub.png";
+import test3 from "../assets/brainwave.png";
 import statsVideo from "../assets/testviedo.mp4"; // 🎥 Your autoplay video here
 
 const TestimonialsCarousel = () => {
@@ -19,7 +19,7 @@ const TestimonialsCarousel = () => {
   const testimonials = [
     {
       quote:
-        "Clear, thoughtful, and fast — Franklin made the whole process effortless.",
+        "Clear, thoughtful, and fast — Growth Hub made the whole process effortless.",
       author: "Olivia Tran",
       position: "Creative Director, Bloom Agency",
       image: test1,
@@ -76,8 +76,8 @@ const TestimonialsCarousel = () => {
 
       {/* Massive Background Heading */}
       <h1
-        className="absolute top-[6%] md:top-[5%] left-1/2 -translate-x-1/2
-    text-[18vw] md:text-[12rem] lg:text-[13rem] font-bold 
+        className="absolute top-[6%] md:top-[2%] left-1/2 -translate-x-1/2
+    text-[18vw] md:text-[9rem] lg:text-[13rem] font-bold 
     tracking-tight leading-[0.85]
     bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)]
     bg-clip-text text-transparent opacity-40
@@ -87,7 +87,7 @@ const TestimonialsCarousel = () => {
       </h1>
 
       {/* Foreground Content */}
-      <div className="relative z-10 max-w-6xl w-full mt-24 md:mt-32">
+      <div className="relative z-10 max-w-7xl w-full mt-24 md:mt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 pb-20">
 
           {/* Left Stats */}
