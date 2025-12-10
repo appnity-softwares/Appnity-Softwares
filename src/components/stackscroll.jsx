@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import img2 from "../assets/brainwavescale.png";
 import img3 from "../assets/growthhubscale.png";
-import img5 from "../assets/stack5.png";
+import img5 from "../assets/cgsadi.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
