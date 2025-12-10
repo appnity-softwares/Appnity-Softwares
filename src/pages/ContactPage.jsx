@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import InputField from "../components/InputField";
-
+import img from "../assets/contact.png";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -133,10 +133,10 @@ export default function ContactPage() {
         {/* ---------------- RIGHT : IMAGE ---------------- */}
         <div className="flex justify-center items-start">
           <img
-            src="https://images.unsplash.com/photo-1616004655120-12420784e7c2?auto=format&fit=crop&w=900&q=80"
+            src= {img}
             alt="contact visual"
             loading="lazy"
-            className="rounded-3xl w-full max-h-[650px] object-cover shadow-lg"
+            className="rounded-3xl max-w-[600px] max-h-[600px] object-cover shadow-lg"
           />
         </div>
 
