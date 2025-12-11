@@ -41,8 +41,8 @@ We deliver end-to-end digital solutions including:
 
 ## 7. Contact Us  
 Have a project in mind or need consultancy? Let’s talk:  
-- 📧 Email: (your company-email@example.com)  
-- 📞 Phone: (your company phone number)  
+- 📧 Email: business@appnity.co.in  
+- 📞 Phone: +91 73896 47904  
 - 📍 Address: As above  
 
 ## 8. Get Started  
