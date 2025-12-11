@@ -1,39 +1,39 @@
 export const portfolio = [
     {
         id: 1,
-        title: "E-commerce Website",
+        title: "E-commerce Platform",
         category: "Web Development",
-        description: "Ek fully functional e-commerce platform jo customer ko seamless shopping experience de.",
-        technologies: ["React", "Node.js", "MongoDB"],
-        imageUrl: "src/assets/p1.png",
+        description: "A high-performance, secure e-commerce solution designed for seamless shopping experiences and scalable growth.",
+        technologies: ["React", "Node.js", "MongoDB", "Tailwind"],
+        imageUrl: "src/assets/e-commerce.png",
         projectUrl: "#"
     },
     {
         id: 2,
-        title: "Mobile App Design",
+        title: "Health & Fitness App",
         category: "UI/UX Design",
-        description: "Ek intuitive aur visually appealing mobile app ka design jo user engagement badhata hai.",
-        technologies: ["Figma", "Adobe XD"],
+        description: "An intuitive and visually engaging mobile application design focused on user retention and daily activity tracking.",
+        technologies: ["Figma", "Prototyping", "User Research"],
         imageUrl: "src/assets/p2.webp",
         projectUrl: "#"
     },
     {
         id: 3,
-        title: "Corporate Branding",
+        title: "TechCorp Identity",
         category: "Branding",
-        description: "Ek brand ke liye complete visual identity, jisme logo, color palette, aur typography shamil hai.",
-        technologies: ["Illustrator", "Photoshop"],
+        description: "A complete corporate visual identity including logo design, color palette, and typography for a modern tech firm.",
+        technologies: ["Adobe Illustrator", "Brand Strategy"],
         imageUrl: "src/assets/p3.avif",
         projectUrl: "#"
     },
     {
         id: 4,
-        title: "Portfolio Website",
+        title: "Creative Portfolio",
         category: "Web Development",
-        description: "Ek creative portfolio website jo aapke kaam ko behtareen tareeke se showcase kare.",
-        technologies: ["React", "Framer Motion"],
+        description: "A visually stunning personal portfolio website featuring smooth animations and a unique interactive layout.",
+        technologies: ["React", "Framer Motion", "GSAP"],
         imageUrl: "src/assets/p1.png",
         projectUrl: "#"
     },
- 
+
 ];

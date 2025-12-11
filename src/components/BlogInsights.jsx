@@ -1,110 +1,98 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { blogData } from "../data/blogData";
 
 export default function BlogInsights() {
-  const blogs = [
-    {
-      id: 1,
-      image:
-        "https://framerusercontent.com/images/AWhJGkoO1R4OjT86q2SUa6hQtyg.png",
-      title: "Bridging Design & Development",
-      description: "Clean UI into seamless code",
-      readTime: "2 Min Read",
-    },
-    {
-      id: 2,
-      image:
-        "https://framerusercontent.com/images/chp7C8iulZpS7COcG0vizKTBw1k.png?scale-down-to=1024",
-      title: "High-Performance Website",
-      description: "Principles dev should build with",
-      readTime: "3 Min Read",
-    },
-    {
-      id: 3,
-      image:
-        "https://framerusercontent.com/images/2g1ervfFGOFw7M9o9qPv7ognLs.png",
-      title: "Design That Converts",
-      description: "Strategic visuals drive results",
-      readTime: "2 Min Read",
-    },
-     {
-      id: 4,
-      image:
-        "https://framerusercontent.com/images/agh1fOKB68bmz5i7jTuchksYqs.png?scale-down-to=1024",
-      title: "Design That Converts",
-      description: "Strategic visuals drive results",
-      readTime: "2 Min Read",
-    },
-     {
-      id: 5,
-      image:
-        "	https://framerusercontent.com/images/xaT5BrnsTobFUhkTLPEae7z2gc4.png?scale-down-to=1024",
-      title: "Design That Converts",
-      description: "Strategic visuals drive results",
-      readTime: "2 Min Read",
-    },
-     {
-      id: 6,
-      image:
-        "https://framerusercontent.com/images/6q3AkgZ10FtoWjmSoY6KZKf8tn0.png?scale-down-to=1024",
-      title: "Design That Converts",
-      description: "Strategic visuals drive results",
-      readTime: "2 Min Read",
-    },
-  ];
+  const navigate = useNavigate();
+
+  const handleBlogClick = (blogId) => {
+    navigate(`/blog/${blogId}`);
+    window.scrollTo(0, 0);
+  };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-16 px-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* 💡 Big Background Title */}
-      <div className="absolute top-0 left-0 right-0 text-center pointer-events-none">
-        <h1 className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-extrabold text-gray-300 opacity-20 leading-none tracking-tighter select-none">
-          Blog Insights
+      <div className="absolute top-0 left-0 right-0 text-center pointer-events-none overflow-hidden">
+        <h1 className="text-[12vw] md:text-[14vw] font-extrabold text-gray-400 opacity-40 leading-none tracking-tighter select-none font-inter uppercase">
+          Blogs
         </h1>
       </div>
 
       {/* 📰 Blog Cards Grid */}
-      <div className="relative z-10 max-w-[1400px] mx-auto pt-24 md:pt-32 lg:pt-40">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
+      <div className="relative z-10 max-w-7xl mx-auto pt-24 md:pt-32 lg:pt-40">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <p className="text-orange-600 text-sm md:text-base font-semibold tracking-wide uppercase mb-3">
+            Our Latest Articles
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">
+            Insights & Updates
+          </h2>
+        </div>
+
+        {/* Blog Grid - Simplified */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 h-auto">
+          {blogData.map((blog) => (
             <div
               key={blog.id}
-              // className="group cursor-pointer bg-white/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col"
-              className=""
+              onClick={() => handleBlogClick(blog.id)}
+              className="group cursor-pointer flex flex-col gap-4"
             >
-              {/* 🖼️ Image Section */}
-              <div className="relative w-full h-[340px] md:h-[400px] lg:h-[540px] rounded-3xl overflow-hidden">
+              {/* 🖼️ Image Section - Clean & Minimal */}
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 shadow-sm group-hover:shadow-md transition-all duration-300">
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
 
-                {/* 🕒 Read Time Badge (overlay) */}
-                
+                {/* Category Badge - Minimal */}
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                  {blog.category}
+                </div>
               </div>
 
               {/* ✍️ Content Section */}
-              <div className="p-6 flex flex-col justify-between   rounded-xl flex-grow">
-                <div >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-0 group-hover:text-indigo-600 transition-colors">
-                    {blog.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {blog.description}
-                  </p>
-                  <span className="relative -right-56 ml-16  bottom-8 bg-black/70 text-white text-xs px-3 py-1 rounded-full">
-                  {blog.readTime}
-                </span>
+              <div className="flex flex-col gap-2 px-1">
+                {/* Meta Info */}
+                <div className="flex items-center gap-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <span>{blog.date}</span>
+                  <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
+                  <span>{blog.readTime}</span>
                 </div>
 
-                {/* 🔗 Read More Button */}
-                {/* <button className="mt-1 self-start text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors">
-                  Read More →
-                </button> */}
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300 leading-snug">
+                  {blog.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                  {blog.description}
+                </p>
+
+                {/* Simple Link */}
+                <div className="mt-2 inline-flex items-center text-sm font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                  Read Article
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Empty State if no blogs */}
+        {blogData.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-gray-500 text-lg">No blogs available at the moment.</p>
+          </div>
+        )}
       </div>
     </div>
   );

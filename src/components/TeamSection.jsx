@@ -62,9 +62,9 @@ const TeamMemberCard = memo(({ member }) => {
       <div className='card-inner'>
         {/* Front of the Card */}
         <div className="card-front bg-white shadow-lg overflow-hidden">
-          <img 
-            src={member.imageUrl} 
-            alt={member.name} 
+          <img
+            src={member.imageUrl}
+            alt={member.name}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
@@ -84,13 +84,13 @@ const TeamMemberCard = memo(({ member }) => {
               <span key={i} className="bg-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{skill}</span>
             ))}
           </div>
-           <div className="flex space-x-4 mt-5">
-              {member.socials.map((social, index) => (
-                <a key={index} href={social.url} className="text-white hover:text-orange-400 transition-colors text-xl">
-                  <i className={social.icon}></i>
-                </a>
-              ))}
-            </div>
+          <div className="flex space-x-4 mt-5">
+            {member.socials.map((social, index) => (
+              <a key={index} href={social.url} className="text-white hover:text-orange-400 transition-colors text-xl">
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -109,17 +109,17 @@ const TeamSection = () => {
   return (
     <section className="bg-[#dbdbdb] py-20 md:py-28 font-inter ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="relative text-center mb-5 h-[40vh] md:h-[45vh] lg:h-[20vh]">
- 
+        <div className="relative text-center mb-5 h-[40vh] md:h-[45vh] lg:h-[20vh]">
 
-<h1
-  
-  className="absolute top-[6%] md:top-[3%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[15vw] md:text-[12rem] lg:text-[10rem] font-semibold tracking-tight leading-[0.85] bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40 select-none z-0 pointer-events-none"
->
-  Meet the Members
-</h1>
 
-</div>
+          <h1
+
+            className="absolute top-[6%] md:top-[3%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[15vw] md:text-[12rem] lg:text-[10rem] font-semibold tracking-tight leading-[0.85] bg-[linear-gradient(180deg,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.05)_100%)] bg-clip-text text-transparent opacity-40 select-none z-0 pointer-events-none"
+          >
+            Meet the Members
+          </h1>
+
+        </div>
 
 
 
@@ -127,9 +127,9 @@ const TeamSection = () => {
       <div className="marquee ">
         <div className="marquee-content">
           {duplicatedMembers.map((member, index) => (
-            <TeamMemberCard 
+            <TeamMemberCard
               key={`${member.id}-${index}`}
-              member={member} 
+              member={member}
             />
           ))}
         </div>

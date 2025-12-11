@@ -9,6 +9,7 @@ import Works from "./pages/Works.jsx";
 import Services from "./pages/Services.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
+import BlogDetailPage from "./pages/BlogDetailPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import PortfolioPage from "./pages/PortfolioPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/blog/:id" element={<BlogDetailPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />

@@ -52,7 +52,7 @@ const StickyCardsSection = () => {
       ref={sectionRef}
       className="relative bg-[#dbdbdb] overflow-hidden py-14 md:py-24"
     >
- 
+
 
       {/* Big Title */}
       <div className="flex justify-center items-center h-[18vh] sm:h-[20vh] md:h-[22vh] relative">
@@ -139,8 +139,8 @@ const StickyCardsSection = () => {
                 md:hidden
               "
             >
-<p
-  className="
+              <p
+                className="
     text-[10px] sm:text-[12px] md:text-sm
     leading-relaxed sm:leading-normal
     opacity-80
@@ -150,10 +150,10 @@ const StickyCardsSection = () => {
     sm:text-start        /* Tablet → text-align: start */
     md:pr-[73px]         /* Tablet → padding-right: 73px */
   "
->
-  We’ve helped businesses across industries achieve their goals.
-  Here are some of our selected works.
-</p>
+              >
+                We’ve helped businesses across industries achieve their goals.
+                Here are some of our selected works.
+              </p>
 
 
               <p className="text-[11px] tracking-wider opacity-70">
@@ -247,7 +247,7 @@ const StickyCardsSection = () => {
                 <p className="text-sm opacity-60 uppercase tracking-widest">
                   Year
                 </p>
-                <p className="text-2xl font-bold mt-1">2023</p>
+                <p className="text-2xl font-bold mt-1">2025</p>
               </div>
 
               <div>

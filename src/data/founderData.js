@@ -1,7 +1,10 @@
+
+import image from "../assets/founder.jpeg";
+
 export const founder = {
   name: "Pushpa Raj",
   title: "The Founder",
-  imageUrl: "https://framerusercontent.com/images/cdiudTEW8MSbl2008vSYXSq9ndI.png?scale-down-to=1024",
+  imageUrl: image,
   badgeUrl: "https://framerusercontent.com/images/JpJ9ryMkQp811zxkS5X8I8Igdo.png",
   social: [
     { icon: "fa-brands fa-x-twitter", url: "#" },

@@ -3,7 +3,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Button from "./Button";
-
+import image from "../assets/brainwave.png";
+import image1 from "../assets/growthhub.png";
+import image2 from "../assets/crova.png";
 export default function ServicesCarousel() {
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -16,8 +18,7 @@ export default function ServicesCarousel() {
       id: 0,
       title: "Web Design",
       bgText: "Web Design",
-      image:
-        "https://framerusercontent.com/images/EBtg3SqsQjHY12Y56g88GlQL89c.png",
+      image: image,
       description:
         "We create modern, responsive websites that engage users and drive results.",
       tags: ["UX/UI Design", "Responsive Layouts", "Web Development"],
@@ -27,7 +28,7 @@ export default function ServicesCarousel() {
       title: "Brand Design",
       bgText: "Brand Design",
       image:
-        "https://framerusercontent.com/images/L3jNOIvjVNNJ9KYGN7ZewlhM4.png?scale-down-to=1024",
+         image1,
       description:
         "We build bold, cohesive brand identities that leave a lasting impression.",
       tags: ["Visual Identity", "Style Guides", "Brand Strategy"],
@@ -37,7 +38,7 @@ export default function ServicesCarousel() {
       title: "Logo Design",
       bgText: "Logo Design",
       image:
-        "https://framerusercontent.com/images/eKy5vm5RJn0lbHSDCifL8K7vfg.png?scale-down-to=1024",
+        image2,
       description:
         "We design clean, memorable logos that capture your brand's essence.",
       tags: ["Logo Marks", "Wordmarks", "Icon Design"],
@@ -86,7 +87,7 @@ export default function ServicesCarousel() {
           data-aos-easing="ease-in-sine"
         >
           {/* Service Card */}
-          <div className="w-full max-w-xl sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+          <div className="w-full max-w-xl sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto">
             <div className="rounded-3xl overflow-hidden">
               <div className="rounded-3xl overflow-hidden">
                 <img

@@ -1,3 +1,9 @@
+import image1 from "../assets/crovaicon.png";
+import image2 from "../assets/GR.png";
+import image3 from "../assets/uz.png";
+import image4 from "../assets/rp.png";
+import image5 from "../assets/ai.png";   
+
 export const awards = [
 
   {
@@ -6,7 +12,7 @@ export const awards = [
     company: "Link →",
     link: "https://crova.vercel.app",
     images: [
-      "https://framerusercontent.com/images/37rQg0jsNt3doVASSt8Gtsts.svg",
+  image1,
 
 
     ],
@@ -17,8 +23,7 @@ export const awards = [
     company: "Link →",
     link: "https://www.growth-hub.co.in",
     images: [
-      "https://framerusercontent.com/images/71Dh7U3QdOb9yYiFfJnt78pe30A.svg",
-      ,
+      image2,
     ],
   },
   {
@@ -27,7 +32,7 @@ export const awards = [
     company: "Link →",
     link: "https://uizone314.vercel.app",
     images: [
-      "https://framerusercontent.com/images/9Th1qGLYST6YJYL0sXOf5Clc9r0.svg",
+      image3,
       ,
     ],
   },
@@ -37,7 +42,7 @@ export const awards = [
     company: "Link →",
     link: "https://ramedix-pharma.vercel.app",
     images: [
-      "https://framerusercontent.com/images/rw5cnTgSCNnxr9gI5TfShYvFJ9M.svg",
+      image4,
 
     ],
   },
@@ -47,7 +52,7 @@ export const awards = [
     company: "Link →",
     link: "https://ai-mock-interviews-five-alpha.vercel.app",
     images: [
-      "https://framerusercontent.com/images/37rQg0jsNt3doVASSt8Gtsts.svg",
+      image5,
 
     ],
   },
