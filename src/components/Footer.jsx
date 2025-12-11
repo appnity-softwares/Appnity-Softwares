@@ -4,7 +4,7 @@ import third from "../assets/third3.png";
 export default function AgeroFooter() {
   let today = new Date().getDate() + "-" + (new Date().getMonth() + 1) + "-" + new Date().getFullYear();
   return (
-    <div className="min-h-screen p-4 bg-[#dbdbdb]">
+    <div className="min-h-screen p-2 bg-[#dbdbdb]">
       <footer className="relative min-h-screen overflow-hidden rounded-3xl">
 
         {/* ✅ Background Layer */}
@@ -51,7 +51,7 @@ export default function AgeroFooter() {
                 <h3 className="text-gray-400 text-xs uppercase mb-3 tracking-wider">Legals</h3>
                 <ul className="space-y-2 text-2xl sm:text-2xl font-bold py-3">
                   <li><Link to="/privacy-policy" className="text-white hover:text-orange-400">Privacy Policy</Link></li>
-                  
+
                   <li><Link to="/terms-of-service" className="text-white hover:text-orange-400">Terms of Service</Link></li>
                 </ul>
               </div>

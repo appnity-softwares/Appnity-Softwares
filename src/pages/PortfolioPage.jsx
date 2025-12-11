@@ -3,13 +3,15 @@ import PortfolioHead from '../components/PortfolioHead';
 import PortfolioTemplate from '../components/PortfolioTemplate';
 import PortfolioCarousel from '../components/PortfolioCarousel';
 import LetsConnect from '../components/LetsConnect';
+// import Hero from '../components/Hero';
 
 const PortfolioPage = () => {
     return (
         <div className="bg-[#e6e6e6] min-h-screen">
+
             <PortfolioHead />
             <PortfolioCarousel />
-            <PortfolioTemplate />
+            {/* <PortfolioTemplate /> */}
             <LetsConnect />
         </div>
     );

@@ -10,7 +10,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-[#dbdbdb] text-center px-5 py-20 md:py-32 mb-20">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-[#dbdbdb] text-center px-5 py-20 md:py-32">
 
       {/* Small orange hello text */}
       <p
@@ -19,28 +19,28 @@ const About = () => {
       >
         (evolove)
       </p>
- 
 
-{/* Animated Main Heading */}
-<ScrollWordReveal
-  text={
-    `We help fast-growing companies build stunning brands and digital products that users love. 
+
+      {/* Animated Main Heading */}
+      <ScrollWordReveal
+        text={
+          `We help fast-growing companies build stunning brands and digital products that users love. 
     `
-  }
-  className="text-[8vw] md:text-3xl lg:text-5xl font-bold leading-tight text-black max-w-4xl font-sans justify-center"
-  dataAos="fade-up"
-/>
+        }
+        className="text-[8vw] md:text-3xl lg:text-5xl font-bold leading-tight text-black max-w-4xl font-sans justify-center"
+        dataAos="fade-up"
+      />
 
 
       {/* Buttons Container */}
-{/* Buttons Container */}
-<div
-  className="mt-10 md:mt-14 w-full max-w-lg mx-auto"
-  data-aos="fade-up"
-  data-aos-delay="200"
->
-  <div
-    className="
+      {/* Buttons Container */}
+      <div
+        className="mt-10 md:mt-14 w-full max-w-lg mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div
+          className="
       grid
       grid-cols-2          /* MOBILE → 2 buttons per row */
       sm:grid-cols-3       /* TABLET → 3 per row */
@@ -49,16 +49,16 @@ const About = () => {
       md:gap-2             /* more spacing tablet+ */
       place-items-center   /* center align buttons */
     "
-  >
-    <Button name="Branding" icon="fas fa-star" />
-    <Button name="Logo" icon="fas fa-globe" />
-    <Button name="Website" icon="fas fa-desktop" />
+        >
+          <Button name="Branding" icon="fas fa-star" />
+          <Button name="Logo" icon="fas fa-globe" />
+          <Button name="Website" icon="fas fa-desktop" />
 
-    <Button name="Illustration" icon="fas fa-paint-brush" />
-    <Button name="Interface" icon="fas fa-table-cells" />
-    <Button name="Strategy" icon="fas fa-lightbulb" />
-  </div>
-</div>
+          <Button name="Illustration" icon="fas fa-paint-brush" />
+          <Button name="Interface" icon="fas fa-table-cells" />
+          <Button name="Strategy" icon="fas fa-lightbulb" />
+        </div>
+      </div>
 
     </section>
   );
