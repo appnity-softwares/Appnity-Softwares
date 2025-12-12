@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import InputField from "../components/InputField";
 import img from "../assets/contact.png";
+import SEOHead from "../components/SEOHead";
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -70,6 +72,12 @@ export default function ContactPage() {
 
   return (
     <section className="w-full bg-gray-200 py-20 px-6">
+      <SEOHead
+        title="Contact Us - Get In Touch with Appnity"
+        description="Have a project in mind? Get in touch with Appnity for web development, mobile apps, UI/UX design, and custom software solutions. Let's build something amazing together."
+        keywords="contact Appnity, hire developers, software consultation, get quote, web development inquiry, mobile app inquiry"
+        path="/contact"
+      />
       <Toaster position="top-center" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
 
@@ -133,7 +141,7 @@ export default function ContactPage() {
         {/* ---------------- RIGHT : IMAGE ---------------- */}
         <div className="flex justify-center items-start">
           <img
-            src= {img}
+            src={img}
             alt="contact visual"
             loading="lazy"
             className="rounded-3xl max-w-[600px] max-h-[600px] object-cover shadow-lg"

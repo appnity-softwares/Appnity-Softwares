@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { getBlogById, getRelatedBlogs } from "../data/blogData";
+import SEOHead from "../components/SEOHead";
 
 const BlogDetailPage = () => {
     const { id } = useParams();
@@ -13,9 +14,31 @@ const BlogDetailPage = () => {
         window.scrollTo(0, 0);
     }, [id]);
 
+    // Convert date string to ISO format for structured data
+    const formatDateForSchema = (dateStr) => {
+        const months = {
+            'January': '01', 'February': '02', 'March': '03', 'April': '04',
+            'May': '05', 'June': '06', 'July': '07', 'August': '08',
+            'September': '09', 'October': '10', 'November': '11', 'December': '12'
+        };
+        const parts = dateStr.replace(',', '').split(' ');
+        if (parts.length === 3) {
+            const month = months[parts[0]] || '01';
+            const day = parts[1].padStart(2, '0');
+            const year = parts[2];
+            return `${year}-${month}-${day}`;
+        }
+        return new Date().toISOString().split('T')[0];
+    };
+
     if (!blog) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <SEOHead
+                    title="Blog Not Found"
+                    description="The blog you're looking for doesn't exist."
+                    path={`/blog/${id}`}
+                />
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog Not Found</h1>
                     <p className="text-gray-600 mb-8">The blog you're looking for doesn't exist.</p>
@@ -32,8 +55,25 @@ const BlogDetailPage = () => {
 
     return (
         <div className="min-h-screen bg-white font-sans">
+            <SEOHead
+                title={blog.title}
+                description={blog.description}
+                keywords={blog.tags?.join(', ')}
+                path={`/blog/${id}`}
+                image={blog.image}
+                type="article"
+                article={{
+                    title: blog.title,
+                    description: blog.description,
+                    author: blog.author,
+                    image: blog.image,
+                    datePublished: formatDateForSchema(blog.date),
+                    tags: blog.tags,
+                }}
+            />
             {/* 1. Header Section */}
             <div className="relative pt-24 pb-12 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center">
+
 
                 {/* Breadcrumb - Absolute Top Left */}
                 <nav className="absolute top-6 left-6 text-xs sm:text-sm hidden sm:block z-10">

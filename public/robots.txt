@@ -1,0 +1,17 @@
+# Robots.txt for Appnity Software
+# https://www.appnity.co.in/
+
+# Allow all crawlers to access all pages
+User-agent: *
+Allow: /
+
+# Disallow access to private/development files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+
+# Sitemap location
+Sitemap: https://www.appnity.co.in/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1
