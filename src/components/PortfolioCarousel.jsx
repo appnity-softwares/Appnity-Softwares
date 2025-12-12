@@ -155,9 +155,15 @@ export default function PortfolioCarousel() {
 
                   {/* Buttons */}
                   <div className="flex gap-3 sm:gap-4">
-                    <button className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-xs sm:text-sm md:text-base font-semibold transition-all shadow-lg hover:shadow-orange-600/25">
-                      View Project <ExternalLink size={16} />
-                    </button>
+          <a
+  href={currentProject.projectUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-xs sm:text-sm md:text-base font-semibold transition-all shadow-lg hover:shadow-orange-600/25"
+>
+  View Project <ExternalLink size={16} />
+</a>
+
 
                     <button className="p-2 sm:p-3 bg-white/5 hover:bg-white/10 text-white rounded-xl border border-white/10">
                       <Github size={18} />
