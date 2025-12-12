@@ -6,7 +6,7 @@ export const portfolio = [
         description: "A high-performance, secure e-commerce solution designed for seamless shopping experiences and scalable growth.",
         technologies: ["React", "Node.js", "MongoDB", "Tailwind"],
         imageUrl: "src/assets/e-commerce.png",
-        projectUrl: "#"
+        projectUrl: "https://crova.vercel.app/"
     },
     {
         id: 2,

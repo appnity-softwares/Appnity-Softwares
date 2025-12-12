@@ -66,6 +66,17 @@ const TeamCarousel = () => {
                 { icon: "fab fa-linkedin-in", url: "https://linkedin.com/" }
             ]
         },
+                {
+            name: "Saurabh Jain",
+            title: "Technical Lead",
+            bio: "Seasoned technologist with deep expertise in modern development practices. Saurabh architects robust solutions and mentors the team to deliver cutting-edge products.",
+            image: team3,
+            social: [
+                { icon: "fas fa-envelope", url: "mailto:saurabh@example.com" },
+                { icon: "fab fa-github", url: "https://github.com/" },
+                { icon: "fab fa-linkedin-in", url: "https://linkedin.com/" }
+            ]
+        },
         {
             name: "Kunal Dhariwal",
             title: "Associate Software Engineer",
@@ -77,17 +88,7 @@ const TeamCarousel = () => {
                 { icon: "fab fa-linkedin-in", url: "https://linkedin.com/" }
             ]
         },
-        {
-            name: "Shorab Jain",
-            title: "Technical Lead",
-            bio: "Seasoned technologist with deep expertise in modern development practices. Shorab architects robust solutions and mentors the team to deliver cutting-edge products.",
-            image: team3,
-            social: [
-                { icon: "fas fa-envelope", url: "mailto:shorab@example.com" },
-                { icon: "fab fa-github", url: "https://github.com/" },
-                { icon: "fab fa-linkedin-in", url: "https://linkedin.com/" }
-            ]
-        },
+
         {
             name: "Jatin Kurrey",
             title: "Full Stack Developer",
